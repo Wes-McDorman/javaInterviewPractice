@@ -15,6 +15,7 @@ public class QuickClasses {
 		
 	}
     
+    
     //Overload!
     public boolean isOdd(int num) {
 		if (num % 2 == 0) {
@@ -61,10 +62,11 @@ public class QuickClasses {
     	ArrayList<String> aL = new ArrayList<String>();
     	aL.add("First String");
     	aL.add("Second String");
+    	aL.add("Last String?");
     	Iterator<String> it = aL.iterator();
     	
     	while(it.hasNext()) {
-    		System.out.println(it.next());
+    		System.out.print(it.next() + " ");
     	}
     	
     }
@@ -85,6 +87,8 @@ public class QuickClasses {
     	return 0;
     }
     
+    
+    
     public static void main(String[] args) {
     	
     	//Always instantiate 
@@ -92,12 +96,19 @@ public class QuickClasses {
     	
     	System.out.println(qc.isOdd("12345"));
     	System.out.println(qc.isOdd(204));
-    	System.out.println(qc.factorial(5));
-    	System.out.println(qc.reverseStr("STring!"));
-    	System.out.println(qc.isPal("tacocat"));
+    	int factorialInt = 4;
+    	System.out.println("Factorial of " + factorialInt + ": "+ qc.factorial(factorialInt));
+    	System.out.println("Reversed String: " +qc.reverseStr("STring!"));
+    	System.out.println("Is a pal: " + qc.isPal("tacocat"));
     	
-    	System.out.println(qc.firstRepeatedChar("qwertyWe"));
+    	System.out.println("Repeated character: " + qc.firstRepeatedChar("qwertyWe"));
     	
     	qc.printArray();
+    	
+    	System.out.println("Binary? " + Integer.toString(5, 2));
+    	System.out.println(" ");
+    	
     }
+
+
 }
